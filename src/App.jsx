@@ -440,7 +440,7 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
           )}
         </div>
         
-        <p style={{ ...s.small, marginTop: 40, position: 'absolute', bottom: 40, left: 0, right: 0, textAlign: 'center' }}>
+        <p style={{ ...s.small, marginTop: 40, position: 'fixed', bottom: 24, left: 0, right: 0, textAlign: 'center' }}>
           Your data stays on your device.
         </p>
       </div>
