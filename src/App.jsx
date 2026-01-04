@@ -136,7 +136,7 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
         <h1 style={{ ...s.h1, fontSize: 38, fontStyle: 'italic' }}>
           It can calculate like a spreadsheet,<br/>
           think like an advisor,<br/>
-          and teach you what both of them can't.
+          and teach you what both can't.
         </h1>
         
         <p style={{ ...s.p, marginTop: 40, marginBottom: 40 }}>
