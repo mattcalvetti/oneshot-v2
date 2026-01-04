@@ -152,7 +152,7 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
   // Philosophy
   if (view === 'philosophy') return (
     <div style={s.page}>
-      <div style={s.wrap}>
+      <div style={{ ...s.wrap, paddingTop: 0, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start' }}>
         <p style={s.link} onClick={() => setView('landing')}>← back</p>
         
         <div style={{ marginTop: 40 }}>
@@ -167,7 +167,7 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
           </p>
           
           <p style={s.p}>
-            The people who build wealth aren't smarter. They just show up. Again and again. The system makes showing up automatic.
+            The people who build wealth aren't smarter. They just show up.<br/>Again and again. The system makes showing up automatic.
           </p>
           
           <div style={{ borderLeft: '2px solid #1a1a1a', paddingLeft: 20, margin: '32px 0' }}>
@@ -177,12 +177,12 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
           </div>
           
           <p style={s.p}>
-            Claude reads your numbers and tells you what to do next. It's pretty fucking smart.
+            Claude reads your numbers and tells you what to do next.<br/>It's pretty fucking smart.
           </p>
         </div>
         
         <p style={{ ...s.small, marginTop: 32, marginBottom: 16 }}>
-          Don't freak when Spotify opens. What sicko budgets without music? Come back when you've picked something.
+          Don't freak when Spotify opens. What sicko budgets without music?<br/>Come back when you've picked something.
         </p>
 
         <button
