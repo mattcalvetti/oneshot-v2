@@ -203,6 +203,8 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
       <div style={s.page}>
         <div style={{ ...s.wrap, maxWidth: 520 }}>
           <p style={s.link} onClick={() => setView('philosophy')}>← back</p>
+
+          <div style={{ marginTop: 64 }}></div>
           
           <p style={{ fontSize: 13, color: '#999', marginTop: 40, marginBottom: 24, letterSpacing: 0.5 }}>THE BASICS</p>
           
