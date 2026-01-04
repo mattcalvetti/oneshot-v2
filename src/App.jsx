@@ -170,19 +170,14 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
             The people who build wealth aren't smarter. They just show up.<br/>Again and again. The system makes showing up automatic.
           </p>
           
-          <div style={{ borderLeft: '2px solid #1a1a1a', paddingLeft: 20, margin: '32px 0' }}>
-            <p style={{ ...s.p, margin: 0, fontStyle: 'italic' }}>
-              "I will not risk inevitability for optionality."
-            </p>
-          </div>
-          
           <p style={s.p}>
             Claude reads your numbers and tells you what to do next.<br/>It's pretty fucking smart.
           </p>
         </div>
         
         <p style={{ ...s.small, marginTop: 32, marginBottom: 16 }}>
-          Don't freak when Spotify opens. What sicko budgets without music?<br/>Come back when you've picked something.
+          Spotify's about to open. Come back when you've got something playing.
+          
         </p>
 
         <button
@@ -195,7 +190,7 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
           Build my system
         </button>
         
-        <p style={{ ...s.small, marginTop: 40, textAlign: 'center' }}>
+        <p style={{ ...s.small, marginTop: 40, textAlign: 'center', width: '100%' }}>
         Your data stays on your device.
         </p>
       </div>
