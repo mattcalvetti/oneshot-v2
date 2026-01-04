@@ -177,12 +177,12 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
           </div>
           
           <p style={s.p}>
-            Claude reads your numbers and tells you what to do next. The smartest financial brain on the planet, focused entirely on your situation.
+            Claude reads your numbers and tells you what to do next. It's pretty fucking smart.
           </p>
         </div>
         
         <p style={{ ...s.small, marginTop: 32, marginBottom: 16 }}>
-          We're about to open Spotify. Feel free to queue something good, then come back.
+          Don't freak when Spotify opens. What sicko budgets without music? Come back when you've picked something.
         </p>
 
         <button
@@ -195,8 +195,8 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
           Build my system
         </button>
         
-        <p style={{ ...s.small, marginTop: 40 }}>
-          Your data stays on your device.
+        <p style={{ ...s.small, marginTop: 40, textAlign: 'center' }}>
+        Your data stays on your device.
         </p>
       </div>
     </div>
@@ -348,7 +348,7 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
   // Dashboard
   return (
     <div style={s.page}>
-      <div style={s.wrap}>
+      <div style={{ ...s.wrap, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 40 }}>
           <div />
           <div style={{ display: 'flex', gap: 16 }}>
