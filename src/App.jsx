@@ -10,7 +10,7 @@ const defaultForm = {
   etfs: '', crypto: '', super: '', property: '', other_assets: '',
   rent: '', utilities: '', groceries: '', dining: '', transport: '', health: '', subscriptions: '', personal: '', savings_invest: '',
   hasEquity: false, equityValue: '', vestingMonths: '48', vestedMonths: '', companyVal: '',
-  nextPayday: '', payFrequency: 'fortnightly'
+  nextPayday: '', payFrequency: 'fortnightly', expenseFrequency: 'monthly'
 };
 
 const tooltips = {
@@ -51,7 +51,8 @@ export default function App() {
 
   const num = (v) => parseFloat(v) || 0;
   const monthlyIncome = form.frequency === 'annual' ? num(form.income) / 12 : form.frequency === 'fortnightly' ? num(form.income) * 26 / 12 : num(form.income);
-  const expenses = ['rent','utilities','groceries','dining','transport','health','subscriptions','personal','savings_invest'].reduce((a, k) => a + num(form[k]), 0);
+  const expenseMultiplier = form.expenseFrequency === 'weekly' ? 4.33 : form.expenseFrequency === 'fortnightly' ? 2.17 : 1;
+  const expenses = ['rent','utilities','groceries','dining','transport','health','subscriptions','personal','savings_invest'].reduce((a, k) => a + num(form[k]), 0) * expenseMultiplier;
   const surplus = monthlyIncome - expenses;
   const rate = monthlyIncome > 0 ? (surplus / monthlyIncome) * 100 : 0;
   const liquid = num(form.cash) + num(form.etfs) + num(form.crypto);
@@ -280,7 +281,18 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
             </div>
           </div>
           
-          <p style={{ fontSize: 13, color: '#999', marginTop: 40, marginBottom: 16, letterSpacing: 0.5 }}>MONTHLY EXPENSES</p>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 40, marginBottom: 16 }}>
+  <p style={{ fontSize: 13, color: '#999', letterSpacing: 0.5, margin: 0 }}>EXPENSES</p>
+  <select 
+    style={{ ...s.input, width: 'auto', padding: '4px 8px', fontSize: 12, borderBottom: 'none', color: '#999' }} 
+    value={form.expenseFrequency} 
+    onChange={(e) => updateField('expenseFrequency', e.target.value)}
+  >
+    <option value="weekly">Weekly</option>
+    <option value="fortnightly">Fortnightly</option>
+    <option value="monthly">Monthly</option>
+  </select>
+</div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16, marginBottom: 32 }}>
             {[['rent','Rent/mortgage'],['utilities','Utilities'],['groceries','Groceries'],['dining','Dining/social'],['transport','Transport'],['health','Health/fitness'],['subscriptions','Subscriptions'],['personal','Personal'],['savings_invest','Savings/invest']].map(([k,l]) => (
               <div key={k}>
