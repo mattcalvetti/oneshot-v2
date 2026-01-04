@@ -190,7 +190,7 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
           Build my system
         </button>
         
-        <p style={{ ...s.small, marginTop: 40, textAlign: 'center', width: '100%' }}>
+        <p style={{ ...s.small, position: 'fixed', bottom: 24, left: 0, right: 0, textAlign: 'center' }}>
         Your data stays on your device.
         </p>
       </div>
