@@ -144,7 +144,7 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
           This one shows where it's going.
         </p>
         
-        <button style={s.btn} onClick={() => setView('philosophy')}>Begin</button>
+        <button style={{ ...s.btn, width: 'auto' }} onClick={() => setView('philosophy')}>Begin</button>
       </div>
     </div>
   );
