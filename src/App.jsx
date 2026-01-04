@@ -151,11 +151,11 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
 
   // Philosophy
   if (view === 'philosophy') return (
-    <div style={s.page}>
+    <div style={{ ...s.page, position: 'relative', minHeight: '100vh' }}>
       <div style={{ ...s.wrap, paddingTop: 0, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start' }}>
         <p style={s.link} onClick={() => setView('landing')}>← back</p>
         
-        <div style={{ marginTop: 40 }}>
+        <div style={{ marginTop: 64 }}>
           <p style={{ fontSize: 13, color: '#999', marginBottom: 24, letterSpacing: 0.5 }}>THE SYSTEM</p>
           
           <p style={s.p}>
@@ -177,7 +177,7 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
         
         <p style={{ ...s.small, marginTop: 32, marginBottom: 16 }}>
           Spotify's about to open. Come back when you've got something playing.
-          
+
         </p>
 
         <button
@@ -440,7 +440,7 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
           )}
         </div>
         
-        <p style={{ textAlign: 'center', color: '#ccc', fontSize: 12, marginTop: 40 }}>
+        <p style={{ ...s.small, marginTop: 40, position: 'absolute', bottom: 40, left: 0, right: 0, textAlign: 'center' }}>
           Your data stays on your device.
         </p>
       </div>
