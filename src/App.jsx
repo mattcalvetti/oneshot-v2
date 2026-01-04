@@ -73,7 +73,7 @@ export default function App() {
     setLoading(true);
     try {
       const res = await fetch("/api/analyze", {
-  method: "POST", headers: { "Content-Type": "application/json" },
+        method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           model: "claude-sonnet-4-20250514", max_tokens: 1000,
           messages: [{ role: "user", content: `You're a thoughtful, direct financial advisor. Analyze this wealth system. Be genuinely helpful. No fluff.
@@ -180,8 +180,12 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
           </p>
         </div>
         
-        <button 
-          style={{ ...s.btn, marginTop: 32 }} 
+        <p style={{ ...s.small, marginTop: 32, marginBottom: 16 }}>
+          We're about to open Spotify. Feel free to queue something good, then come back.
+        </p>
+
+        <button
+          style={{ ...s.btn, marginTop: 0 }}
           onClick={() => {
             window.open('https://open.spotify.com', '_blank');
             setView('setup');
