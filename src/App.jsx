@@ -130,7 +130,7 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
   // Landing
   if (view === 'landing') return (
     <div style={s.page}>
-      <div style={{ ...s.wrap, paddingTop: 100 }}>
+      <div style={{ ...s.wrap, paddingTop: 0, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <p style={{ fontSize: 13, color: '#999', marginBottom: 40, letterSpacing: 0.5 }}>A CRITICAL ANALYSIS OF PERSONAL WEALTH</p>
         
         <h1 style={{ ...s.h1, fontSize: 38, fontStyle: 'italic' }}>
