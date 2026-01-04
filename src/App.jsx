@@ -202,7 +202,7 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
     return (
       <div style={s.page}>
         <div style={{ ...s.wrap, maxWidth: 520 }}>
-          <p style={s.link} onClick={() => setView('philosophy')}>← back</p>
+          <p style={{ ...s.link, marginTop: 40 }} onClick={() => setView('philosophy')}>← back</p>
 
           <div style={{ marginTop: 64 }}></div>
           
@@ -301,7 +301,7 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
           
           <p style={{ fontSize: 13, color: '#999', marginTop: 40, marginBottom: 16, letterSpacing: 0.5 }}>ASSETS</p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16, marginBottom: 32 }}>
-            {[['etfs','ETFs/stocks'],['crypto','Crypto'],['super','Super/401k'],['property','Property equity'],['other_assets','Other']].map(([k,l]) => (
+            {[['etfs','Stocks/ETFs'],['crypto','Crypto'],['super','401k/Super'],['property','Property equity'],['other_assets','Other']].map(([k,l]) => (
               <div key={k}>
                 <label style={s.label}>{l}</label>
                 <div style={{ display: 'flex', alignItems: 'center' }}><span style={{ color: '#999', marginRight: 4 }}>$</span><input style={s.input} type="text" inputMode="numeric" value={form[k]} onChange={(e) => updateField(k, e.target.value)} placeholder="0" /></div>
