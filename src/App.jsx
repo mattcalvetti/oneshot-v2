@@ -5,7 +5,7 @@ const fmt = (n) => '$' + Math.round(n).toLocaleString();
 const pct = (n) => n.toFixed(1) + '%';
 
 const defaultForm = {
-  name: '', age: '', income: '', frequency: 'annual', currency: 'AUD',
+  name: '', age: '', income: '', frequency: 'annual', currency: 'USD',
   cash: '', cashFloor: '', creditBalance: '', creditTarget: '',
   etfs: '', crypto: '', super: '', property: '', other_assets: '',
   rent: '', utilities: '', groceries: '', dining: '', transport: '', health: '', subscriptions: '', personal: '', savings_invest: '',
@@ -175,19 +175,11 @@ ONLY valid JSON: {"headline":"...","insights":[...],"oneMove":"..."}` }]
           </p>
         </div>
         
-        <p style={{ ...s.small, marginTop: 32, marginBottom: 16 }}>
-          Spotify's about to open. Come back when you've got something playing.
-
-        </p>
-
         <button
-          style={{ ...s.btn, marginTop: 0 }}
-          onClick={() => {
-            window.open('https://open.spotify.com', '_blank');
-            setView('setup');
-          }}
-        >
-          Build my system
+        style={{ ...s.btn, marginTop: 32 }}
+        onClick={() => setView('setup')}
+>
+        Build my system
         </button>
         
         <p style={{ ...s.small, position: 'fixed', bottom: 24, left: 0, right: 0, textAlign: 'center' }}>
